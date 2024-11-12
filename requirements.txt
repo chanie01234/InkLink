@@ -1,3 +1,4 @@
 django
 django-tailwind[reload]
 python-dotenv
+django_browser_reload
