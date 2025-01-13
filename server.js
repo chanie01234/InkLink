@@ -1,16 +1,17 @@
 // express web server
 import { createRequestHandler } from "@remix-run/express";
 import express from "express";
-import * as build from "./build/server/index.js";
+import cors from "cors";
+//import * as build from "./build/server/index.js";
 
 const viteDevServer =
-  process.env.NODE_ENV === "production"
+   process.env.NODE_ENV === "development"
     ? null
     : await import("vite").then((vite) =>
         vite.createServer({
           server: { middlewareMode: true },
         })
-      );
+        );
 
 const app = express();
 app.use(
@@ -18,6 +19,7 @@ app.use(
     ? viteDevServer.middlewares
     : express.static("build/client")
 );
+app.use(cors());
 
 const build = viteDevServer
   ? () =>
