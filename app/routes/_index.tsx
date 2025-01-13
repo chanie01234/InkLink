@@ -1,9 +1,12 @@
+/*  
+layout is sourced from root.tsx
+*/
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Tats In Town" },
+    { name: "description", content: "Find your Tat Artist!" },
   ];
 };
 
@@ -77,7 +80,7 @@ const resources = [
   },
   {
     href: "https://remix.run/start/tutorial",
-    text: "Tutorial (30 min)",
+    text: "Tutoria (30 min)",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

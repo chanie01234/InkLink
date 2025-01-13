@@ -1,15 +1,19 @@
+/*  
+This is the layout file for _index and about files
+*/
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  LiveReload,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
-import "./tailwind.css";
+import "./styles/tailwind.css";
 
 export const links: LinksFunction = () => [
+    //google fonts embed
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -35,11 +39,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );
 }
 
+//nested routing
 export default function App() {
-  return <Outlet />;
+  return <Outlet />; //render routes/about.tsx and routes/_index.tsx files here
 }
