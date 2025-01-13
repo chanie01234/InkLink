@@ -11,13 +11,30 @@ declare module "@remix-run/node" {
 export default defineConfig({
   plugins: [
     remix({
-      future: {
-        v3_fetcherPersist: true,
-        v3_relativeSplatPath: true,
-        v3_throwAbortReason: true,
-        v3_singleFetch: true,
-        v3_lazyRouteDiscovery: true,
-      },
+        basename: "/",
+        buildDirectory: "build",
+        future: {
+            v3_fetcherPersist: true,
+            v3_relativeSplatPath: true,
+            v3_throwAbortReason: true,
+            v3_singleFetch: true,
+            v3_lazyRouteDiscovery: true,
+        },
+        ignoredRouteFiles: ["**/*.css"],
+/*        routes(defineRoutes) {
+            return defineRoutes((route) => {
+                route("/", "_index.tsx", { index: true });
+                route("about", "about.tsx");
+                route("artist", "artist.tsx", () => {
+                    route("", "artist/$userid.tsx", { index: true });
+                    route(":userid/following", "artist.$userid.following.tsx");
+                    route(":userid/followers", "artist.$userid.followers.tsx");
+                    route(":userid/tagged", "artist.$userid.tagged.tsx");
+                    route(":userid/saved", "artist.$userid.saved.tsx");
+                });
+            });
+        },*/
+        serverBuildFile: "index.js",
     }),
     tsconfigPaths(),
   ],
