@@ -26,7 +26,6 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Feedback](#feedback)
-- [Build Process](#build-process)
 - [Contributors](#contributors)
 - [Sponsors](#sponsors)
 
@@ -38,45 +37,24 @@
 
 App Intro
 
-**Available for iOS for now :)**
-
-<p align="center">
-  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
-</p>
-
 ## [Features](#features)
 
 A few of the things you can do the app:
 
-* 
-
-<p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
-</p>
-
-<p align="center">
-  <img src = "http://i.imgur.com/0iorG20.png" width=700>
-</p>
-
-## Feedback (#feedback)
+## [Feedback](#feedback)
 
 Feel free to send us feedback on [Twitter](https://twitter.com/gitpointapp) or [file an issue](https://github.com/gitpoint/git-point/issues/new). Feature requests are always welcome.
 
 If there's anything you'd like to chat about, hit us up at ______
 
-## Build Process (#build-process)
-
-- Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
-- Clone or download the repo
-- `yarn` to install dependencies
-
+## [Contributors](#contributors)
 Take a look at the [contributing guidelines](./CONTRIBUTING.md) for a detailed process on how to build the application as well as troubleshooting information.
+1. Install dependencies: npm install
+2. Build the code : npm run build
+3. Run dev environment: npm run dev
+4. Go to localhost:3000
 
-## Contributors (#contributors)
-
-
-
-## Sponsors / Stakeholders (#sponsors)
+## [Sponsors](#sponsors)
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/git-point#sponsor)]
 
